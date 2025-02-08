@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-h1 {
+h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -57,27 +57,16 @@ li {
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.list-text {
-    flex-grow: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-right: 10px;
-    max-width: 200px;
-    /* Ensures uniform text width */
 }
 
 .delete-btn {
-    background: red;
+    /* background: red; */
     border: none;
     color: white;
     padding: 5px;
     cursor: pointer;
-    flex-shrink: 0;
+    border-radius: 4px;
+}
+.list-text{
+    
 }

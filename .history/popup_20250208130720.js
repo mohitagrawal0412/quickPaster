@@ -11,10 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
       snippets.forEach((snippet, index) => {
         let li = document.createElement("li");
         li.innerHTML = `
-            <span class="list-text" title="${snippet}">${snippet}</span>
-            <button class="delete-btn" data-index="${index}"><strong>DEL</strong></button>
+            <span>${snippet}</span>
+            <button class="delete-btn" data-index="${index}">X</button>
           `;
         snippetList.appendChild(li);
+      });
+
+      // Attach delete event listeners
+      document.querySelectorAll(".delete-btn").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          let index = event.target.getAttribute("data-index");
+          snippets.splice(index, 1);
+          chrome.storage.local.set({ snippets });
+          loadSnippets(); // Reload list
+        });
       });
     });
   }
@@ -34,16 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  snippetList.addEventListener("click", (event) => {
-    if (event.target.classList.contains("delete-btn")) {
-      let index = event.target.getAttribute("data-index");
-      chrome.storage.local.get(["snippets"], function (data) {
-        let snippets = data.snippets || [];
-        snippets.splice(index, 1);
-        chrome.storage.local.set({ snippets }, loadSnippets);
-      });
-    }
-  });
-
-  loadSnippets();
+  loadSnippets(); // Load snippets on startup
 });

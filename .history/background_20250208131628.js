@@ -8,12 +8,12 @@ chrome.commands.onCommand.addListener(async (command) => {
     if (command === "paste_note_1" && snippets.length > 0) note = snippets[0];
     else if (command === "paste_note_2" && snippets.length > 1)
       note = snippets[1];
-    else if (command === "paste_note_3" && snippets.length > 2)
-      note = snippets[2];
-    else if (command === "paste_note_3" && snippets.length > 3)
-      note = snippets[3];
-    else if (command === "paste_note_3" && snippets.length > 4)
-      note = snippets[4];
+    "paste_note_3": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3"
+      },
+      "description": "Paste Note 3"
+    }
 
     if (note) {
       await chrome.storage.local.set({ copiedNote: note });

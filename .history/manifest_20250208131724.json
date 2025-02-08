@@ -31,7 +31,8 @@
         "default": "Ctrl+Shift+4"
       },
       "description": "Paste Note 4"
-    }
+    },
+   
   },
   "background": {
     "service_worker": "background.js"

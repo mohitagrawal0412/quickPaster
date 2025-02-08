@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
       snippets.forEach((snippet, index) => {
         let li = document.createElement("li");
         li.innerHTML = `
-            <span class="list-text" title="${snippet}">${snippet}</span>
-            <button class="delete-btn" data-index="${index}"><strong>DEL</strong></button>
-          `;
+              <span class ">${snippet}</span>
+              <button class="delete-btn" data-index="${index}"><strong>DEL</strong></button>
+            `;
         snippetList.appendChild(li);
       });
     });

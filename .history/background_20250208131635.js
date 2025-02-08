@@ -10,10 +10,10 @@ chrome.commands.onCommand.addListener(async (command) => {
       note = snippets[1];
     else if (command === "paste_note_3" && snippets.length > 2)
       note = snippets[2];
-    else if (command === "paste_note_3" && snippets.length > 3)
-      note = snippets[3];
-    else if (command === "paste_note_3" && snippets.length > 4)
-      note = snippets[4];
+    else if (command === "paste_note_3" && snippets.length > 2)
+      note = snippets[2];
+    else if (command === "paste_note_3" && snippets.length > 2)
+      note = snippets[2];
 
     if (note) {
       await chrome.storage.local.set({ copiedNote: note });
