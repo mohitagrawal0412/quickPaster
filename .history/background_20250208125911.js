@@ -1,7 +1,5 @@
 chrome.commands.onCommand.addListener(async (command) => {
-  try {
-    // ✅ Use await to get snippets from storage
-    let data = await chrome.storage.local.get(["snippets"]);
+  chrome.storage.local.get(["snippets"], async function (data) {
     let snippets = data.snippets || [];
 
     let note = "";
@@ -30,7 +28,5 @@ chrome.commands.onCommand.addListener(async (command) => {
         }
       }
     }
-  } catch (error) {
-    console.error("Error in background.js:", error);
-  }
+  });
 });

@@ -5,32 +5,25 @@
   "description": "Paste saved code snippets using shortcut keys",
   "permissions": ["storage", "scripting", "activeTab", "clipboardWrite"],
   "action": {
-    "default_popup": "popup.html"
-  },
-  "commands": {
-    "paste_note_1": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+1"
-      },
-      "description": "Paste Note 1"
-    },
-    "paste_note_2": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+2"
-      },
-      "description": "Paste Note 2"
-    },
-    "paste_note_3": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+3"
-      },
-      "description": "Paste Note 3"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
     }
   },
   "background": {
     "service_worker": "background.js"
   },
   "host_permissions": ["<all_urls>"],
+  "commands": {
+    "paste_note_1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Paste Note 1"
+    }
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
