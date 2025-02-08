@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Code Paster",
+    "version": "1.0",
+    "description": "Paste saved code snippets using shortcut keys",
+    "permissions": ["storage", "scripting", "activeTab", "clipboardWrite"],
+    "commands": {
+      "paste_note_1": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+1"
+        },
+        "d,escription": "Paste Note 1"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
