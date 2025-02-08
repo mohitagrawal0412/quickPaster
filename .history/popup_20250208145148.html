@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Code Paster</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quick Code Paster</h1>
+      <p class="info">Use <b>Ctrl + Shift + [1,2,3]</b> to paste snippets.</p>
+
+      <div class="input-group">
+        <textarea
+          id="snippetInput"
+          placeholder="Enter your snippet..."
+        ></textarea>
+        <button id="addSnippet">Add Snippet</button>
+      </div>
+
+      <ul id="snippetList"></ul>
+    </div>
+  </body>
+</html>
