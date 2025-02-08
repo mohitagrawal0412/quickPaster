@@ -22,12 +22,6 @@
         "default": "Ctrl+Shift+3"
       },
       "description": "Paste Note 3"
-    },
-    "paste_note_4": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+4"
-      },
-      "description": "Paste Note 4"
     }
   },
   "background": {

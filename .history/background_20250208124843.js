@@ -1,12 +1,15 @@
 chrome.commands.onCommand.addListener(async (command) => {
-  let note = "";
+  const note="";
 
-  if (command === "paste_note_1") note = "vector<int> vec(n,0);";
-  else if (command === "paste_note_2") note = "vector<int> nums(n,0);";
-  else if (command === "paste_note_3") note = "vector<int> arr(n,0);";
-  else if (command === "paste_note_4") note = "vector<int> um(n,0);";
+  if (command === "paste_note_1") 
+     note = "vector<int> vec(n,0);";
+  else  if (command === "paste_note_1") {
+       note = "vector<int> vec(n,0);";
+  else    if (command === "paste_note_1") {
+         note = "vector<int> vec(n,0);";
+   else     if (command === "paste_note_1") {
+           note = "vector<int> vec(n,0);";
 
-  if (note) {
     // Save note to storage
     await chrome.storage.local.set({ copiedNote: note });
 
